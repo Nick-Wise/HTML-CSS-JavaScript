@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Projects</title>
+  <style>
+    .Sub-button{
+      border:none;
+      padding:10px 15px 10px 15px;
+      border-radius: 50px;
+      background-color: black;
+      color:white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom:35px;
+    }
+
+    .is-subed{
+      background-color:rgb(240,240,240);
+      color:black;
+    }
+
+    body{
+      font-family: Arial;
+    }
+
+    .cost-input{
+      font-size:15px;
+      padding: 10px;
+    }
+
+    .calc-button{
+      background-color: green;
+      color: white;
+      border:none;
+      padding: 12px 15px 12px 15px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .final-cost{
+      margin-bottom: 45px;
+    }
+  </style>
+</head>
+<body>
+  <p>Youtube Subscribe Button</p>
+  <button onclick="subscribe()" class="js-sub-button Sub-button"> Subscribe</button>
+  
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
+  <input placeholder="Cost of order" class ="js-cost-input cost-input" onkeydown="
+    handleCostKeyDown();
+  ">
+  <button class="calc-button" onclick="
+  calculateTotal();
+  ">Calculate</button>
+  <p class ="js-total-cost final-cost"> </p>
+
+  <p>Rock Paper Sissocrs</p>
+  <a href="10-rock-paper-scissors.html">Click Here</a>
+  <script>
+  function subscribe(){
+    const buttonElem = document.querySelector('.js-sub-button');
+
+  if(buttonElem.innerText === 'Subscribe'){
+   buttonElem.innerText = 'Subscribed';
+   buttonElem.classList.add('is-subed');
+  }else{
+   buttonElem.innerText = 'Subscribe';
+   buttonElem.classList.remove('is-subed');
+  }
+  }
+
+  function calculateTotal(){
+    const inputElement = document.querySelector('.js-cost-input');
+    let cost = Number(inputElement.value);
+    
+    
+    if(cost < 40){
+      cost +=10;
+    }
+    document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+  }
+
+  function handleCostKeyDown(){
+    if(event.key === 'Enter'){
+      calculateTotal();
+    }
+  }
+
+  window.document
+  window.console.log('window');
+
+  </script>
+</body>
+</html>

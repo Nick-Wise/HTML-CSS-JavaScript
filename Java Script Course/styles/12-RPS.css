@@ -1,0 +1,40 @@
+body{
+  background-color: rgb(25,25,25);
+  color:white;
+  font-family: Arial;
+}
+.header{
+  font-size:30px;
+  font-weight: bold;
+}
+.images{
+  height: 50px;
+}
+
+.move-button{
+  background-color:transparent;
+  border-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border-width:3px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.rst-button,
+.auto-play-button{
+  padding: 8px 15px;
+  font-size:15px;
+  border: none;
+  cursor: pointer;
+}
+.result{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+.score{
+  margin-top:60px;
+}
